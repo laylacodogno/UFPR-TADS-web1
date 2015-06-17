@@ -1,0 +1,200 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+@import "compass/reset";
+@import "compass/css3";
+
+
+/*
+ * --------------- Variables ---------------
+ */
+
+// Fonts
+$fontTitle: 'Oswald', sans-serif;
+$fontText: 'Arial';
+
+// Colors
+$blueLight: #636088;
+$blueDark: #2F2B60;
+$grayLight: #E6E7E8;
+$grayDark: #919191;
+$grayBackground: #EDEDED;
+
+// Sizes
+$maxWidth: 100%;
+$desktopWidth: 1024px;
+$tabletWidth: 768px;
+$contentWidth: 980px;
+
+
+/* --------------- Mixin Devices --------------- */
+
+@media only screen and (min-width: $desktopWidth){ // Desktop
+
+}
+
+@media only screen and (min-width: $tabletWidth) and (max-width: $desktopWidth - 1){ // Tablet
+
+}
+
+@media only screen and (max-width: $tabletWidth - 1){ // Mobile
+
+}
+
+body{
+	font-family: $fontText;
+	margin: 0 auto;
+	position: relative;
+	
+	.main-page{
+		max-width: $contentWidth;
+	}
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $fontTitle;
+}
+
+a{
+	outline: none;
+	&:hover{
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+/* --------------- Header --------------- */
+
+.main-header{
+	max-width: 100%;
+	background-color: $grayLight;
+	position: relative;
+		
+	#mainHeader{
+		height: 70px;
+		max-width: $contentWidth;
+		margin: auto;
+		
+		.pull-left{
+			float: left;
+			
+			li{
+				display: inline;
+				a{
+					color: #5a5a5a;
+					font-size: 11px;
+					font-weight: bold;
+					padding: 14px 10px;
+					text-transform: uppercase;
+				}
+			}
+		}
+		
+		.pull-right{
+			float: right;
+			
+			li{
+				display: inline;
+				a{
+					color: #5a5a5a;
+					font-size: 11px;
+					font-weight: bold;
+					padding: 14px 10px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
+/* --------------- Fim Header --------------- */
+
+/* --------------- Footer  --------------- */
+.main-footer{
+	max-width: 100%;
+	position: relative;
+	
+	#mainFooter{
+		background-color: $blueDark;
+		height: 150px;
+		color: white;
+		text-align: center;
+		
+		#quemSomos{
+			display: inline-block;
+			vertical-align: top;
+			width: 200px;
+			padding-right: 60px;
+			
+			h4{
+				font-family: $fontTitle;
+				padding: 10px;
+				font-size: 26px;
+			}
+			
+			p{
+				font-size: 16px;
+				font-family: $fontText;
+			}
+			
+		}
+		
+		#links{
+			display: inline-block;
+			vertical-align: top;
+			
+			h4{
+				font-family: $fontTitle;
+				padding: 10px;
+				font-size: 26px;
+			}
+			
+		}
+		
+		#socialLinks{
+			display: inline-block;
+			vertical-align: top;
+		}
+			
+	}
+}
+
+/* --------------- Fim Footer  --------------- */
+
+/* --------------- Main Contato  --------------- */
+
+#mainContato{
+	margin: auto;
+	max-width: $contentWidth;
+	padding: 20px;
+	
+	.contato{
+		
+		form{
+			padding: 10px;
+			position: relative;
+			border: 1px $blueDark solid;
+			width: 50%;
+			display: inline-block;
+			
+		}
+		
+		#map-canvas{
+			width: 100%;
+			max-width: 347px;
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 30px;
+			margin-top: 40px;
+			padding: 25px 20px 20px 20px;
+			border: 1px $blueDark solid;
+			
+		}
+		
+	}
+}
+
+/* --------------- Fim Main Contato  --------------- */
